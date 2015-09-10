@@ -196,7 +196,11 @@ int get_cpu_type(void)
 
   if (strstr(line, "BCM2709") != NULL)
     return PROC_TYPE_BCM2709;
+  if (strstr(line, "BCM2836") != NULL)
+    return PROC_TYPE_BCM2709;
   else if (strstr(line, "BCM2708") != NULL)
+    return PROC_TYPE_BCM2708;
+  else if (strstr(line, "BCM2835") != NULL)
     return PROC_TYPE_BCM2708;
   else
   {
